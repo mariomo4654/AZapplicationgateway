@@ -1,7 +1,9 @@
 #!/bin/bash
-az account set --subscription 9c9ec17e-5891-48ae-b268-10a820808ebd
-RgName=rg_mario
-location=$(az group show --name $RGname --query location -o tsv)
+#az account set --subscription 9c9ec17e-5891-48ae-b268-10a820808ebd
+RgName=mariorg
+
+# Retrieve the location of the resource group and assign it to a variable
+Location=$(az group show --name $RgName --query location -o tsv)
 
 date
 # Create a Virtual Network for the VMs
